@@ -13,6 +13,7 @@ services:
     depends_on:
       - db
     build: ./
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
     environment:
       DB_HOST: db
       DB_PASSWORD: wordpress
@@ -22,7 +23,7 @@ services:
       FS_METHOD: direct
 
   sut:
-    image: alpine:3.10
+    image: alpine:3.13
     depends_on:
       - wordpress
     command: /tmp/run_tests.sh

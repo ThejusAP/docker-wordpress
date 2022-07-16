@@ -1,26 +1,28 @@
 
 # WordPress Docker Container
 
-Lightweight WordPress container with Nginx 1.18 & PHP-FPM 7.3 based on Alpine Linux.
+Lightweight WordPress container with Nginx 1.22 & PHP-FPM 8.0 based on Alpine Linux.
 
-_WordPress version currently installed:_ **5.6**
+_WordPress version currently installed:_ **6.0**
 
-* Used in production for my own sites, making it stable, tested and up-to-date
+* Used in production for many sites, making it stable, tested and up-to-date
 * Optimized for 100 concurrent users
 * Optimized to only use resources when there's traffic (by using PHP-FPM's ondemand PM)
-* Best to be used with Amazon Cloudfront as SSL terminator and CDN
+* Works with Amazon Cloudfront or CloudFlare as SSL terminator and CDN
+* Multi-platform, supporting AMD4, ARMv6, ARMv7, ARM64
 * Built on the lightweight Alpine Linux distribution
-* Small Docker image size (+/-50MB)
-* Uses PHP 7.3 for better performance, lower cpu usage & memory footprint
+* Small Docker image size (+/-90MB)
+* Uses PHP 8.0 for better performance, lower cpu usage & memory footprint
 * Can safely be updated without losing data
 * Fully configurable because wp-config.php uses the environment variables you can pass as an argument to the container
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/trafex/wordpress.svg)](https://hub.docker.com/r/trafex/wordpress/)
-[![Docker image layers](https://images.microbadger.com/badges/image/trafex/wordpress.svg)](https://microbadger.com/images/trafex/wordpress)
-![nginx 1.18](https://img.shields.io/badge/nginx-1.18-brightgreen.svg)
-![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)
+![nginx 1.20](https://img.shields.io/badge/nginx-1.22-brightgreen.svg)
+![php 8.0](https://img.shields.io/badge/php-8.0-brightgreen.svg)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## [![Trafex Consultancy](https://timdepater.com/logo/mini-logo.png)](https://timdepater.com?mtm_campaign=github)
+I can help you with [Containerization, Kubernetes, Monitoring, Infrastructure as Code and other DevOps challenges](https://timdepater.com/?mtm_campaign=github).
 
 ## Usage
 See [docker-compose.yml](https://github.com/TrafeX/docker-wordpress/blob/master/docker-compose.yml) how to use it in your own environment.
